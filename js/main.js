@@ -21,6 +21,26 @@ $(window).scroll(function() {
   }
 });
 
+// To TOP Button
+$(window).scroll(function() {
+  let height = $(window).scrollTop();
+
+  if(height >= 600) {
+    $('.to__top').addClass('to__top-adaptive');
+  } else {
+    $('.to__top').removeClass('to__top-adaptive');
+  }
+});
+// Slow scroll
+(function($) {
+  $(function() {
+    $('.to__top').click(function() {
+      $('html, body').animate({scrollTop: 0},500);
+      return false;
+    })
+  })
+})(jQuery)
+
 let number = document.querySelector('.num1'),
     number2 = document.querySelector('.num2'),
     number3 = document.querySelector('.num3'),
@@ -384,6 +404,6 @@ function init() {
     position: new google.maps.LatLng(50.429380, 30.360489),
     map: map,
     title: 'Plenum',
-    icon: '/catalog/view/theme/pgt/img/map-icon.png'
+    // icon: '/catalog/view/theme/pgt/img/map-icon.png'
   });
 }
