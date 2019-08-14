@@ -41,6 +41,16 @@ $(window).scroll(function() {
   })
 })(jQuery)
 
+// Scroll bottom
+$(document).ready(function(){
+  $(".bottom__arrow").on("click", function (event) {
+      event.preventDefault();
+      let id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 500);
+  });
+});
+
 let number = document.querySelector('.num1'),
     number2 = document.querySelector('.num2'),
     number3 = document.querySelector('.num3'),
