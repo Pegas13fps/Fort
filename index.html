@@ -58,27 +58,24 @@
             </div>
         </div>  <!-- END nav left section-->
         <div class="header__sandwich" onclick="btnMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
 
-
-        
-        <div class="header__rightMenu">
-            <ul>
-                <li><a href="#">ПРОДУКЦІЯ</a></li>
-                <li><a href="#">ПОРТФОЛІО РОБІТ</a></li>
-                <li><a href="#">БЛОГ</a></li>
-                <li><a href="#">КОНТАКТИ</a></li>
-            </ul>
-            <div class="rightMenu__social">
-                <a class="fb__link" href="#"><img src="./images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
-            </div>
+    <div class="header__rightMenu">
+        <ul>
+            <li><a href="#">ПРОДУКЦІЯ</a></li>
+            <li><a href="#">ПОРТФОЛІО РОБІТ</a></li>
+            <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">КОНТАКТИ</a></li>
+        </ul>
+        <div class="rightMenu__social">
+            <a class="fb__link" href="#"><img src="./images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
         </div>
-
+    </div>
 
     <main class="main">
         <div class="main__info">
@@ -161,19 +158,40 @@
     <section class="history_main">
         <div class="wrap">
             <h2>Історія компанії</h2>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>  
+                
             <div class="tree">
                 <div class="double right-side">
-                    <div class="left">
-
-                    </div>
+                    <div class="left"></div>
                     <div class="right">
                         <div class="img"></div>
-                        <div class="title">
-                            2007
+                        <div class="title">2007</div>
+                        <div class="subtitle">Рік заснування компанії</div>
+                        <div class="descr">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                         </div>
-                        <div class="subtitle">
-                            Рік заснування компанії
+                    </div>
+                </div>
+                <div class="double left-side">
+                    <div class="left">
+                        <div class="img"></div>
+                        <div class="title">2009</div>
+                        <div class="subtitle">Відкриття першого салону</div>
+                        <div class="descr">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                         </div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="double right-side">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="img"></div>
+                        <div class="title">2007</div>
+                        <div class="subtitle">Рік заснування компанії</div>
                         <div class="descr">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                         </div>
@@ -192,48 +210,10 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                         </div>
                     </div>
-                    <div class="right">
-
-                    </div>
+                    <div class="right"></div>
                 </div>
                 <div class="double right-side">
-                    <div class="left">
-
-                    </div>
-                    <div class="right">
-                        <div class="img"></div>
-                        <div class="title">
-                            2007
-                        </div>
-                        <div class="subtitle">
-                            Рік заснування компанії
-                        </div>
-                        <div class="descr">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </div>
-                    </div>
-                </div>
-                <div class="double left-side">
-                    <div class="left">
-                        <div class="img"></div>
-                        <div class="title">
-                            2009
-                        </div>
-                        <div class="subtitle">
-                            Відкриття першого салону
-                        </div>
-                        <div class="descr">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-                        </div>
-                    </div>
-                    <div class="right">
-
-                    </div>
-                </div>
-                <div class="double right-side">
-                    <div class="left">
-
-                    </div>
+                    <div class="left"></div>
                     <div class="right">
                         <div class="img"></div>
                         <div class="title">
@@ -252,95 +232,93 @@
     </section>
     <!-- Zubets -->
 
-        <div class="gallery__staff-wrapper">
+    <div class="gallery__staff-wrapper">
+        <div class="history_main">
+            <div class="wrap">
+                <h2 class="info__h2">Команда професіоналів</h2>
+            </div>
+        </div>
+        <div class="gallery__staff">
+            <div class="cart__box">
+                <img src="./images/worker1.png" alt="Worker">
+                <h4>Александр Авраменко</h4>
+                <p>столяр</p>
+            </div>
+            <div class="cart__box">
+                <img src="./images/worker2.png" alt="Worker">
+                <h4>Александр Авраменко</h4>
+                <p>столяр</p>
+            </div>
+            <div class="cart__box">
+                <img src="./images/worker3.png" alt="Worker">
+                <h4>Александр Авраменко</h4>
+                <p>столяр</p>
+            </div>
+            <div class="cart__box">
+                <img src="./images/worker4.png" alt="Worker">
+                <h4>Александр Авраменко</h4>
+                <p>столяр</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="company__services">
+        <div class="left__side">
             <div class="history_main">
                 <div class="wrap">
-                    <h2 class="info__h2">Команда професіоналів</h2>
+                    <h2 class="info__h2">Послуги компанії</h2>
                 </div>
             </div>
-            <div class="gallery__staff">
-                <div class="cart__box">
-                    <img src="./images/worker1.png" alt="Worker">
-                    <h4>Александр Авраменко</h4>
-                    <p>столяр</p>
+            <div class="text__block-wrapper">
+                <div class="txt__block txt__block-active">
+                    <h3>Замір</h3>
+                    <p>111 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
                 </div>
-                <div class="cart__box">
-                    <img src="./images/worker2.png" alt="Worker">
-                    <h4>Александр Авраменко</h4>
-                    <p>столяр</p>
+                <div class="txt__block view_2">
+                    <h3>Проектування</h3>
+                    <p>222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
                 </div>
-                <div class="cart__box">
-                    <img src="./images/worker3.png" alt="Worker">
-                    <h4>Александр Авраменко</h4>
-                    <p>столяр</p>
+                <div class="txt__block view_3">
+                    <h3>Виготовлення</h3>
+                    <p>333 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
                 </div>
-                <div class="cart__box">
-                    <img src="./images/worker4.png" alt="Worker">
-                    <h4>Александр Авраменко</h4>
-                    <p>столяр</p>
+                <div class="txt__block view_4">
+                    <h3>Доставка</h3>
+                    <p>444 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
+                </div>
+                <div class="txt__block view_5">
+                    <h3>Монтаж</h3>
+                    <p>555 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
                 </div>
             </div>
+            <a class="orderButton" href="#">Замовити меблі</a>
         </div>
 
-        <div class="company__services">
-
-            <div class="left__side">
-                <div class="history_main">
-                    <div class="wrap">
-                        <h2 class="info__h2">Послуги компанії</h2>
-                    </div>
-                </div>
-                <div class="text__block-wrapper">
-                    <div class="txt__block txt__block-active">
-                        <h3>Замір</h3>
-                        <p>111 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
-                    </div>
-                    <div class="txt__block view_2">
-                        <h3>Проектування</h3>
-                        <p>222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
-                    </div>
-                    <div class="txt__block view_3">
-                        <h3>Виготовлення</h3>
-                        <p>333 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
-                    </div>
-                    <div class="txt__block view_4">
-                        <h3>Доставка</h3>
-                        <p>444 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
-                    </div>
-                    <div class="txt__block view_5">
-                        <h3>Монтаж</h3>
-                        <p>555 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore facilis quo ut. Neque molestias sapiente obcaecati corrupti.</p>
-                    </div>
-                </div>
-                <a class="orderButton" href="#">Замовити меблі</a>
+        <div class="right__side">
+            <div class="services__block">
+                <a href="#" class="active__servBlock">
+                    <p class="size__img">Замір</p>
+                </a>
+                <a href="#">
+                    <span class="topRed-line"></span>                        
+                    <p class="proj__img">Проектування</p>
+                </a>
+                <a href="#">
+                    <span class="topRed-line"></span>
+                    <p class="make__img">Виготовлення</p>
+                </a>
+                <a href="#">
+                    <span class="topRed-line"></span>
+                    <p class="deliver__img">Доставка</p>
+                </a>
+                <a href="#">
+                    <span class="topRed-line"></span>
+                    <p class="inject__img">Монтаж</p>
+                </a>
             </div>
-
-            <div class="right__side">
-                <div class="services__block">
-                    <a href="#" class="active__servBlock">
-                        <p class="size__img">Замір</p>
-                    </a>
-                    <a href="#">
-                        <span class="topRed-line"></span>                        
-                        <p class="proj__img">Проектування</p>
-                    </a>
-                    <a href="#">
-                        <span class="topRed-line"></span>
-                        <p class="make__img">Виготовлення</p>
-                    </a>
-                    <a href="#">
-                        <span class="topRed-line"></span>
-                        <p class="deliver__img">Доставка</p>
-                    </a>
-                    <a href="#">
-                        <span class="topRed-line"></span>
-                        <p class="inject__img">Монтаж</p>
-                    </a>
-                </div>
-
-                <!-- <img src="./images/man.png" alt="Worker"> -->
-            </div>
+            <!-- <img src="./images/man.png" alt="Worker"> -->
         </div>
+    </div>
 
 <!-- Zubets -->
 <section class="advantages_main">
@@ -730,13 +708,10 @@
     </section>
     <!-- Zubets -->
 
-
     </main>
 
     <footer class="footer">
-
         <div class="footer__wrapper">
-
             <div class="logo__block">
                 <a href="#"><img class="header__logo" src="./images/logo-fort-horisont.png" alt="Fort меблі для офісу"></a>
                 <div class="footer__links">
@@ -744,13 +719,11 @@
                     <a href="#"><img src="./images/instagram.png" alt="Instagram"></a>
                 </div>
             </div>
-
             <div class="main__links">
                 <a href="#">Головна</a>
                 <a href="#">Портфоліо робіт</a>
                 <a href="#">Блог</a>
             </div>
-
             <div class="product__links">
                 <a class="title__text" href="#">Каталог продукції</a>
                 <a href="#">Кабинеты</a>
@@ -758,7 +731,6 @@
                 <a href="#">Столы для заседаний</a>
                 <a href="#">Стойки Reseption</a>
             </div>
-
             <div class="services__links">
                 <a class="title__text" href="#">Послуги</a>
                 <a href="#">Замер</a>
@@ -767,7 +739,6 @@
                 <a href="#">Доставка</a>
                 <a href="#">Монтаж</a>
             </div>
-            
             <div class="contacts__links">
                 <p class="title__text" >Контакти</p>
                 <p>г. Киев, б-р Вацлава Гавела 8<br>
@@ -777,7 +748,6 @@
                 <p>+38 066 597-21-40</p>
                 <p>e-mail: meblifort@ukr.net</p>
             </div>
-
             <div class="to__top">
                 <a href="#">
                     <img src="./images/toTop-Btn.png" alt="To top button">
@@ -785,10 +755,8 @@
                 <p>НАВЕРХ</p>
             </div>
         </div>
-
         <p class="copyright">© Fort turniture 2019. Все права защищены</p>
     </footer>
-
 
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js" defer></script>

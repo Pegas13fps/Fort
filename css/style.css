@@ -598,6 +598,11 @@
   position: absolute;
   opacity: 0;
   top: 0;
+  transition: .3s linear;
+  -webkit-transition: .3s linear;
+  -moz-transition: .3s linear;
+  -ms-transition: .3s linear;
+  -o-transition: .3s linear;
 }
 .txt__block-active {
   position: relative;
@@ -611,7 +616,6 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  /* align-items: center; */
 }
 .company__services .right__side .services__block {
   position: relative;
@@ -628,10 +632,13 @@
   align-items: center;
   position: relative;
 }
-.company__services .right__side .services__block a p {
+.company__services .right__side .services__block a > p {
   margin-left: 120px;
   line-height: 40px;
   color: #000;
+}
+.active__servBlock .topRed-line {
+  background: #61f4f0;
 }
 .company__services .right__side .services__block a p::before {
   content: "";
@@ -1559,6 +1566,11 @@ overflow: hidden;
   width: 100%;
   margin: 0 auto;
 }
+.contacts_main .content {
+  position: relative;
+  top: -255px;
+  z-index: -20;
+}
 .contacts_main .controls .wrap {
   background: url(../images/blocks/map-bg.jpg) 50% / cover no-repeat;
   padding: 30px 30px 55px;
@@ -1859,6 +1871,22 @@ overflow: hidden;
   opacity: 1;
 }
 
+/* START progres bar */
+.progress-container {
+  width: 960px;
+  background: #ccc;
+  transform: rotate(90deg);
+  bottom: -450px;
+  z-index: 2;
+  position: relative;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #9e0b0f;
+  width: 0%;
+}
+/* END progres bar */
 
 @media screen and (max-width: 1366px) {
   .nav__item {
