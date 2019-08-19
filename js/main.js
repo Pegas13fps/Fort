@@ -27,7 +27,20 @@ let arrBlocks2 = [...document.querySelectorAll('.tree .double')];
 $('.history_main .wrap').on('scroll', function (e) {
   console.log('ss');
 });
-
+scroll = document.body.scrollTop;
+histImgs = document.querySelectorAll('.history_main .wrap .double');
+windowHeight = window.innerHeight;
+window.addEventListener('scroll', function() {
+  scroll = window.pageYOffset || document.documentElement.scroll;
+  for(i=0;i<histImgs.length;i++){
+		tops = histImgs[i].getBoundingClientRect().top;
+		if(tops<parseInt(windowHeight*.5)) {
+			histImgs[i].classList.add('active')
+		} else {
+			histImgs[i].classList.remove('active')
+		}
+	}
+});
 $(window).scroll(function() {
   let winScroll = $(window).scrollTop() -1700;
   let height = 1079;
@@ -37,19 +50,19 @@ $(window).scroll(function() {
   let scrolled = (winScroll / height) * 100;
   // console.log(scrolled);
 
-  if (scrolled >= 1 && scrolled >= 25) {
-    arrBlocks[0].classList.toggle('active');
-    console.log(scrolled);
+  // if (scrolled >= 1 && scrolled >= 25) {
+  //   arrBlocks[0].classList.toggle('active');
+  //   console.log(scrolled);
 
-  } else if (scrolled >= 25 && scrolled <= 35) {
-    arrBlocks[0].classList.toggle('active');
+  // } else if (scrolled >= 25 && scrolled <= 35) {
+  //   arrBlocks[0].classList.toggle('active');
 
-    // arrBlocks[1].classList.add('active');
-    // console.log('hihihihihihi');
-    // arrBlocks[0].classList.remove('active');
-  } else {
+  //   arrBlocks[1].classList.add('active');
+  //   console.log('hihihihihihi');
+  //   arrBlocks[0].classList.remove('active');
+  // } else {
 
-  }
+  // }
 
   if (scrolled >= 100) {
     return;
