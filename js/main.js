@@ -21,12 +21,6 @@ $(window).scroll(function() {
   }
 });
 
-
-let arrBlocks2 = [...document.querySelectorAll('.tree .double')];
-
-$('.history_main .wrap').on('scroll', function (e) {
-  console.log('ss');
-});
 scroll = document.body.scrollTop;
 histImgs = document.querySelectorAll('.history_main .wrap .double');
 windowHeight = window.innerHeight;
@@ -41,28 +35,11 @@ window.addEventListener('scroll', function() {
 		}
 	}
 });
+
 $(window).scroll(function() {
-  let winScroll = $(window).scrollTop() -1700;
+  let winScroll = $(window).scrollTop() -1600;
   let height = 1079;
-
-  let arrBlocks = [...document.querySelectorAll('.tree .double')];
-
   let scrolled = (winScroll / height) * 100;
-  // console.log(scrolled);
-
-  // if (scrolled >= 1 && scrolled >= 25) {
-  //   arrBlocks[0].classList.toggle('active');
-  //   console.log(scrolled);
-
-  // } else if (scrolled >= 25 && scrolled <= 35) {
-  //   arrBlocks[0].classList.toggle('active');
-
-  //   arrBlocks[1].classList.add('active');
-  //   console.log('hihihihihihi');
-  //   arrBlocks[0].classList.remove('active');
-  // } else {
-
-  // }
 
   if (scrolled >= 100) {
     return;
@@ -70,36 +47,6 @@ $(window).scroll(function() {
     document.getElementById("myBar").style.width = scrolled + "%";
   }
 });
-
-// window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  // let winScroll = $(window).scrollTop() -1700;
-  // console.log(winScroll);
-  // let height = 1079;
-
-  // let arrBlocks = [...document.querySelectorAll('.tree .double')];
-
-  // let scrolled = (winScroll / height) * 100;
-  // // console.log(scrolled);
-
-  // if (winScroll <= 255 && winScroll >= 1) {
-  //   arrBlocks[0].classList.add('active');
-  // }
-  // if (scrolled >= 256 && scrolled <= 350) {
-  //   arrBlocks[1].classList.add('active');
-  //   console.log('hihihihihihi');
-  //   arrBlocks[0].classList.remove('active');
-  // } else {
-
-  // }
-
-  // if (scrolled >= 100) {
-  //   return;
-  // } else {
-  //   document.getElementById("myBar").style.width = scrolled + "%";
-  // }
-}
 
 // To TOP Button
 $(window).scroll(function() {
@@ -203,6 +150,7 @@ window.addEventListener('scroll', function onScroll4() {
 // Menu btn
 function btnMenu(x) {
   x.classList.toggle("change");
+  $( ".hidden__menu" ).toggle('.hidden__menu-active');
 }
 
 // Links AJAX switcher
