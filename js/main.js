@@ -2,39 +2,88 @@ $(window).scroll(function() {
   let height = $(window).scrollTop();
 
   if(height >= 10) {
-  $('.header__rightMenu').addClass('header__rightMenu__adaptive');
-  $('.rightMenu__social').addClass('rightMenu__social__adaptive');
-  $('.fb__link').addClass('fb__link__adaptive');
-  $('.header__sandwich').addClass('right__position');
+    $('.header__rightMenu').addClass('header__rightMenu__adaptive');
+    $('.rightMenu__social').addClass('rightMenu__social__adaptive');
+    $('.fb__link').addClass('fb__link__adaptive');
+    $('.header__sandwich').addClass('right__position');
 
-  $('.header').addClass('header-adaptive');
-  $('.nav__item .item__img').addClass('item__img-adaptive');
+    $('.header').addClass('header-adaptive');
+    $('.nav__item .item__img').addClass('item__img-adaptive');
 
   } else {
-  $('.header__rightMenu').removeClass('header__rightMenu__adaptive');
-  $('.rightMenu__social').removeClass('rightMenu__social__adaptive');
-  $('.fb__link').removeClass('fb__link__adaptive');
-  $('.header__sandwich').removeClass('right__position');
+    $('.header__rightMenu').removeClass('header__rightMenu__adaptive');
+    $('.rightMenu__social').removeClass('rightMenu__social__adaptive');
+    $('.fb__link').removeClass('fb__link__adaptive');
+    $('.header__sandwich').removeClass('right__position');
 
-  $('.header').removeClass('header-adaptive');
-  $('.nav__item .item__img').removeClass('item__img-adaptive');
+    $('.header').removeClass('header-adaptive');
+    $('.nav__item .item__img').removeClass('item__img-adaptive');
   }
 });
 
 scroll = document.body.scrollTop;
-histImgs = document.querySelectorAll('.history_main .wrap .double');
+if(document.querySelector('.history_main .wrap .double')) {
+  histImgs = document.querySelectorAll('.history_main .wrap .double');
+}
+if(document.querySelector('.fade_up')) {
+  fadeUps = document.querySelectorAll('.fade_up');
+}
 windowHeight = window.innerHeight;
+if(document.querySelector('.wow-right')) {
+  wowItems = document.querySelectorAll('.wow-right');
+}
 window.addEventListener('scroll', function() {
   scroll = window.pageYOffset || document.documentElement.scroll;
-  for(i=0;i<histImgs.length;i++){
-		tops = histImgs[i].getBoundingClientRect().top;
-		if(tops<parseInt(windowHeight*.5)) {
-			histImgs[i].classList.add('active')
-		} else {
-			histImgs[i].classList.remove('active')
-		}
-	}
+  if(document.querySelector('.history_main .wrap .double')) {
+    for(i=0;i<histImgs.length;i++){
+      tops = histImgs[i].getBoundingClientRect().top;
+      if(tops<parseInt(windowHeight*.5)) {
+        histImgs[i].classList.add('active')
+      } else {
+        histImgs[i].classList.remove('active')
+      }
+    }
+  }
+  if(document.querySelector('.fade_up')) {
+    for(i=0;i<fadeUps.length;i++){
+      tops = fadeUps[i].getBoundingClientRect().top;
+      if(tops<parseInt(windowHeight*.5)) {
+        fadeUps[i].classList.add('active')
+      } else {
+        fadeUps[i].classList.remove('active')
+      }
+    }
+  }
+
+  if(document.querySelector('.wow-right')) {
+    for(i=0;i<wowItems.length;i++){
+      tops = wowItems[i].getBoundingClientRect().top;
+      if(!wowItems[i].classList.contains('wdel')){
+        if(tops<parseInt(windowHeight*.6)) {
+          wowItems[i].classList.add('active')
+        }
+      } else {
+        if(tops<parseInt(windowHeight*.5)) {
+          wowItems[i].classList.add('active')
+        }
+      }
+
+    }
+  }
+
 });
+if(document.querySelector('.preloader')){
+  setTimeout(function(){
+
+    document.querySelector('.preloader .load').classList.add('active')
+  },500);
+  window.onload = function(){
+    setTimeout(function(){
+      document.querySelector('.preloader').classList.add('inactive');
+      document.querySelector('.content').classList.add('active');
+    },4000)
+  }
+}
 
 $(window).scroll(function() {
   let winScroll = $(window).scrollTop() -1600;
@@ -71,40 +120,40 @@ $(window).scroll(function() {
 // Scroll bottom
 $(document).ready(function(){
   $(".bottom__arrow").on("click", function (event) {
-      event.preventDefault();
-      let id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 500);
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 500);
   });
 });
 
 let number = document.querySelector('.num1'),
-    number2 = document.querySelector('.num2'),
-    number3 = document.querySelector('.num3'),
-    number4 = document.querySelector('.num4'),
+number2 = document.querySelector('.num2'),
+number3 = document.querySelector('.num3'),
+number4 = document.querySelector('.num4'),
 
-    numberTop = number.getBoundingClientRect().top,
-		numberTop2 = number2.getBoundingClientRect().top,
-		numberTop3 = number3.getBoundingClientRect().top,
-		numberTop4 = number4.getBoundingClientRect().top,
-    
-    start = 0, end = 12;
-    start2 = 0, end2 = 200;
-    start3 = 0, end3 = 8;
-    start4 = 0, end4 = 24;
+numberTop = number.getBoundingClientRect().top,
+numberTop2 = number2.getBoundingClientRect().top,
+numberTop3 = number3.getBoundingClientRect().top,
+numberTop4 = number4.getBoundingClientRect().top,
+
+start = 0, end = 12;
+start2 = 0, end2 = 200;
+start3 = 0, end3 = 8;
+start4 = 0, end4 = 24;
 
 
 window.addEventListener('scroll', function onScroll() {
-		if($(window).scrollTop() >= $('.num1').offset().top - $(window).height()+100 ) {
-      this.removeEventListener('scroll', onScroll);
-      let interval = setInterval(function() {
-        number.innerHTML = ++start;
+  if($(window).scrollTop() >= $('.num1').offset().top - $(window).height()+100 ) {
+    this.removeEventListener('scroll', onScroll);
+    let interval = setInterval(function() {
+      number.innerHTML = ++start;
 
-        if(start == end) {
-          clearInterval(interval);
-        }
-      }, 160);
-    }
+      if(start == end) {
+        clearInterval(interval);
+      }
+    }, 160);
+  }
 });
 
 window.addEventListener('scroll', function onScroll2() {
@@ -186,7 +235,7 @@ function removePrev() {
 // Vide autoplay off
 $(document).ready(function() { 
   let media = $('video').not("[autoplay='autoplay']");
-  let tolerancePixel = 300;
+  let tolerancePixel = 700;
 
   function checkMedia(){
     let scrollTop = $(window).scrollTop() + tolerancePixel;
@@ -207,7 +256,23 @@ $(document).ready(function() {
 });
 
 // Zubets JS START
-
+if(document.querySelector('.drop-down-catalog')){
+  headerMenuButts = document.querySelector('.header .nav__link');
+  dropCatalog = document.querySelector('.drop-down-catalog');
+  headerMenuButts.onclick = function(){
+    if(!dropCatalog.classList.contains('active')) {
+      dropCatalog.classList.add('active');
+      setTimeout(function(){
+       dropCatalog.classList.add('vis');
+     },400)
+    } else {
+     dropCatalog.classList.remove('vis');
+     setTimeout(function(){
+       dropCatalog.classList.remove('active');
+     },400)
+   }
+ }
+}
 if(document.querySelector('.products_main')){
   let controls = document.querySelectorAll('.products_main .controls .item');
   for(i=0;i<controls.length;i++){
@@ -267,16 +332,51 @@ $(function() {
     pagination: false
   });
 });
+if(document.querySelector('.contacts_main .content')) {
+  ctsButts = document.querySelectorAll('.contacts_main .controls .items a');
+  crAreas = document.querySelectorAll('.contacts_main .content > div');
+  for(i=0;i<ctsButts.length;i++){
+    ctsButts[i].onclick = switchMap(i); 
+  }
+  function switchMap(ind) {
+    return function(evt){
+      evt.preventDefault();
+      for(i=0;i<crAreas.length;i++){
+        crAreas[i].style.cssText='z-index:1;';
+      }
+      for(i=0;i<ctsButts.length;i++){
+        ctsButts[i].classList.remove('active')
+      }
+      ctsButts[ind].classList.add('active')
 
+      crAreas[ind].classList.add('act');
+      crAreas[ind].classList.add('wow-right','wow-stay');
+      setTimeout(function(){
+        crAreas[ind].style.cssText='z-index:2;';
+        crAreas[ind].classList.add('active');
+      },400);
+      setTimeout(function(){
+       for(i=0;i<crAreas.length;i++){
+        if(i != ind){
+          crAreas[i].classList.remove('act');
+          crAreas[i].classList.remove('wow-right','wow-stay','active');
+        }
+        
+      }
+    },800);
+      
+    }
+  }
+}
 // Google 
 google.maps.event.addDomListener(window, 'load', init);
 function init() {
   var mapOptions = {
     zoom: 16,
     scrollwheel: false,
-    disableDefaultUI: true,
+    // disableDefaultUI: true,
     mapTypeId: 'satellite',
-    center: new google.maps.LatLng(50.429380, 30.360489),
+    center: new google.maps.LatLng(50.446183, 30.416336),
     styles: [{
       "elementType":"geometry",
       "stylers":[
@@ -439,9 +539,9 @@ function init() {
   var mapElement = document.getElementById('map');
   var map = new google.maps.Map(mapElement, mapOptions);
   var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(50.429380, 30.360489),
+    position: new google.maps.LatLng(50.446183, 30.416336),
     map: map,
-    title: 'Plenum',
+    title: 'Fort',
     // icon: '/catalog/view/theme/pgt/img/map-icon.png'
   });
 }
